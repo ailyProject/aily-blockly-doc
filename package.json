@@ -1,0 +1,25 @@
+{
+  "name": "aily-doc",
+  "version": "1.0.0",
+  "description": "![](https://github.com/ailyProject/aily-doc)",
+  "main": "process.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailyProject/aily-doc"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailyProject/aily-doc"
+  },
+  "homepage": "https://github.com/ailyProject/aily-doc#readme",
+  "devDependencies": {
+    "transliteration": "^2.2.0"
+  }
+}
