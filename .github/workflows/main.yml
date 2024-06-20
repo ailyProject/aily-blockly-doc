@@ -1,0 +1,35 @@
+name: CI&&CD
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+      
+      - name: Dependent environment
+        run: |
+          npm i
+      
+      - name: Compile
+        run: |
+          node process.js
+      
+      - name: Deploy
+        uses: garygrossgarten/github-action-scp@v0.8.0
+        with:
+          local: docs
+          remote: ${{ secrets.TARGET }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          privateKey: ${{ secrets.PRIVATEKEY }}
