@@ -2,5 +2,10 @@
     "首页": "home",
     "树莓派&Linux使用指南": "getting-start-linux",
     "Arduino使用指南": "getting-start-arduino",
-    "mbed使用指南": "getting-start-mbed"
+    "mbed使用指南": "getting-start-mbed",
+    "基础知识":"basic-knowledge",
+    "Python开发": "python-dev",
+    "Nodejs开发": "nodejs-dev",
+    "Arduino开发": "arduino-dev",
+    "配置工具": "config-tool"
 }
