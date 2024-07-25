@@ -8,7 +8,7 @@
 
 本模块可使用语音合成（Text To Speech，TTS）技术将文本转化为声音。
 
-模块在无网络状态下，通过串口协议，将UTF8编码的文本转换成语音播报。
+模块使用需搭配上位机设备和扬声器，可以在无网络状态下，通过串口协议，将UTF8编码的文本转换成语音播报。
 
 可应用于叫号系统、考勤机、玩具、地图导航、智能家居等场景，是一套极具性价比的语音合成方案。
 
@@ -191,12 +191,16 @@ FD 00 17 01 04 E4 BD A0 E5 A5 BD EF BC 8C E6 88 91 E6 98 AF E8 89 BE E8 8E 89
 
 ```c++
 #include <Arduino.h>
-
+  // 使用软串口通信 
+  // #include <SoftwareSerial.h>
+  // SoftwareSerial mySerial(2, 3);
   const char* ttsString = "你好，我是艾莉";
   
   void setup() {
     // 初始化串口通信
     Serial.begin(115200);
+    // 使用软串口通信
+    // mySerial.begin(115200);
   }
   
   void loop() {
@@ -215,6 +219,8 @@ FD 00 17 01 04 E4 BD A0 E5 A5 BD EF BC 8C E6 88 91 E6 98 AF E8 89 BE E8 8E 89
     int length = (buffer[1] << 8) | buffer[2];
     for (int i = 0; i < length + 3; i++) {
       Serial.write(buffer[i]);
+      // 使用软串口通信
+      // mySerial.write(buffer[i]);
     }
   }
   
@@ -255,7 +261,7 @@ FD 00 17 01 04 E4 BD A0 E5 A5 BD EF BC 8C E6 88 91 E6 98 AF E8 89 BE E8 8E 89
 
 a. 通过硬件串口连接
 
-此处以树莓派为示例，模块连接到树莓派UART0
+此处以树莓派为示例，模块连接到树莓派UART0（14、15引脚）
 
 <img src="../img/tts/14.png" />
 
@@ -316,7 +322,7 @@ import serial
       sendTTSBuffer(buffer)
 ```
 
-##### nodejs示例程序
+##### nodejs示例程序  
 
 ```javascript
 // 需单独安装serialport包
