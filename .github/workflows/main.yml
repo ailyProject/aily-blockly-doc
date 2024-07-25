@@ -26,10 +26,10 @@ jobs:
           node process.js
       
       - name: Deploy
-        uses: garygrossgarten/github-action-scp@v0.8.0
+        uses: Dylan700/sftp-upload-action@latest
         with:
-          local: docs
-          remote: ${{ secrets.TARGET }}
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          privateKey: ${{ secrets.PRIVATEKEY }}
+          server: ${{ secrets.HOST }}
+          username: ubuntu
+          key: ${{ secrets.PRIVATEKEY }}
+          uploads: |
+            docs => ${{ secrets.TARGET }}
