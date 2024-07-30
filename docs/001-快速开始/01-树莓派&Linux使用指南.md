@@ -10,7 +10,7 @@
 ## 安装&运行  
 确保树莓派已经联网（可以接网线或连接wifi），终端中运行以下指令安装aily sdk：
 ```bash
-pip install aily-py
+pip install aily-py aily-cli
 ```
 ## 使用准备  
 aily的运行依赖大模型API，理论上遵循OpenAI接口标准的主流模型，均可使用。
