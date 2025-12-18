@@ -1,8 +1,7 @@
 {
 "首页":"home",
 "软件安装":"software-installation",
-"主界面介绍":"main-interface-introduction",
-"基本使用指南":"basic-usage-guide",
+"基本使用":"basic-usage-guide",
 "AI使用指南":"ai-usage-guide",
 "云存储与项目分享":"cloud-storage-and-project-sharing",
 "基础入门":"getting-started",
@@ -12,5 +11,6 @@
 "开发板规范":"board-specification",
 "开发板适配":"board-adaptation",
 "使用AI进行适配":"use-ai-for-adaptation",
-"元件编辑器":"component-editor"
+"元件编辑器":"component-editor",
+"仿真器使用":"simulator-usage-guide"
 }
