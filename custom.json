@@ -12,5 +12,6 @@
 "开发板适配":"board-adaptation",
 "使用AI进行适配":"use-ai-for-adaptation",
 "元件编辑器":"component-editor",
-"仿真器使用":"simulator-usage-guide"
+"仿真器使用":"simulator-usage-guide",
+"离线服务":"offline-service"
 }
