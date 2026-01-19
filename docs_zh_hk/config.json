@@ -1,1 +1,106 @@
-{"menu":[{"title":"首頁","page":"home"},{"title":"軟體使用","submenu":[{"title":"軟體安裝","page":"software-installation"},{"title":"基本使用","page":"basic-usage-guide"},{"title":"AI使用指南","page":"ai-usage-guide"},{"title":"串口監視器","page":"serial-monitor"},{"title":"雲端儲存與專案分享","page":"cloud-storage-and-project-sharing"},{"title":"仿真器","page":"simulator-usage-guide"}]},{"title":"教學合集","submenu":[{"title":"基礎入門","page":"getting-started"}]},{"title":"開發者","submenu":[{"title":"開發者模式","page":"developer-mode"},{"title":"庫規範","page":"library-specification"},{"title":"庫適配","page":"library-adaptation"},{"title":"開發板規範","page":"board-specification"},{"title":"開發板適配","page":"board-adaptation"},{"title":"使用AI進行適配","page":"use-ai-for-adaptation"},{"title":"元件編輯器","page":"component-editor"}]},{"title":"其它","submenu":[{"title":"離線服務","page":"offline-service"}]}],"short":{"home":"https://aily.pro/docs_zh_tw/000-首頁.md","software-installation":"https://aily.pro/docs_zh_tw/001-軟體使用/00-軟體安裝.md","basic-usage-guide":"https://aily.pro/docs_zh_tw/001-軟體使用/01-基本使用.md","ai-usage-guide":"https://aily.pro/docs_zh_tw/001-軟體使用/02-AI使用指南.md","serial-monitor":"https://aily.pro/docs_zh_tw/001-軟體使用/03-串口監視器.md","cloud-storage-and-project-sharing":"https://aily.pro/docs_zh_tw/001-軟體使用/04-雲端儲存與專案分享.md","simulator-usage-guide":"https://aily.pro/docs_zh_tw/001-軟體使用/05-仿真器.md","getting-started":"https://aily.pro/docs_zh_tw/002-教學合集/001-基礎入門.md","developer-mode":"https://aily.pro/docs_zh_tw/003-開發者/00-開發者模式.md","library-specification":"https://aily.pro/docs_zh_tw/003-開發者/01-庫規範.md","library-adaptation":"https://aily.pro/docs_zh_tw/003-開發者/02-庫適配.md","board-specification":"https://aily.pro/docs_zh_tw/003-開發者/03-開發板規範.md","board-adaptation":"https://aily.pro/docs_zh_tw/003-開發者/04-開發板適配.md","use-ai-for-adaptation":"https://aily.pro/docs_zh_tw/003-開發者/05-使用AI進行適配.md","component-editor":"https://aily.pro/docs_zh_tw/003-開發者/06-元件編輯器.md","offline-service":"https://aily.pro/docs_zh_tw/004-其它/01-離線服務.md"}}
+{
+    "menu": [
+        {
+            "title": "首頁",
+            "page": "home"
+        },
+        {
+            "title": "軟體使用",
+            "submenu": [
+                {
+                    "title": "軟體安裝",
+                    "page": "software-installation"
+                },
+                {
+                    "title": "基本使用",
+                    "page": "basic-usage-guide"
+                },
+                {
+                    "title": "AI使用指南",
+                    "page": "ai-usage-guide"
+                },
+                {
+                    "title": "串口監視器",
+                    "page": "serial-monitor"
+                },
+                {
+                    "title": "雲端儲存與專案分享",
+                    "page": "cloud-storage-and-project-sharing"
+                },
+                {
+                    "title": "仿真器",
+                    "page": "simulator-usage-guide"
+                }
+            ]
+        },
+        {
+            "title": "教學合集",
+            "submenu": [
+                {
+                    "title": "基礎入門",
+                    "page": "getting-started"
+                }
+            ]
+        },
+        {
+            "title": "開發者",
+            "submenu": [
+                {
+                    "title": "開發者模式",
+                    "page": "developer-mode"
+                },
+                {
+                    "title": "庫規範",
+                    "page": "library-specification"
+                },
+                {
+                    "title": "庫適配",
+                    "page": "library-adaptation"
+                },
+                {
+                    "title": "開發板規範",
+                    "page": "board-specification"
+                },
+                {
+                    "title": "開發板適配",
+                    "page": "board-adaptation"
+                },
+                {
+                    "title": "使用AI進行適配",
+                    "page": "use-ai-for-adaptation"
+                },
+                {
+                    "title": "元件編輯器",
+                    "page": "component-editor"
+                }
+            ]
+        },
+        {
+            "title": "其它",
+            "submenu": [
+                {
+                    "title": "離線服務",
+                    "page": "offline-service"
+                }
+            ]
+        }
+    ],
+    "short": {
+        "home": "https://aily.pro/docs_zh_hk/000-首頁.md",
+        "software-installation": "https://aily.pro/docs_zh_hk/001-軟體使用/00-軟體安裝.md",
+        "basic-usage-guide": "https://aily.pro/docs_zh_hk/001-軟體使用/01-基本使用.md",
+        "ai-usage-guide": "https://aily.pro/docs_zh_hk/001-軟體使用/02-AI使用指南.md",
+        "serial-monitor": "https://aily.pro/docs_zh_hk/001-軟體使用/03-串口監視器.md",
+        "cloud-storage-and-project-sharing": "https://aily.pro/docs_zh_hk/001-軟體使用/04-雲端儲存與專案分享.md",
+        "simulator-usage-guide": "https://aily.pro/docs_zh_hk/001-軟體使用/05-仿真器.md",
+        "getting-started": "https://aily.pro/docs_zh_hk/002-教學合集/001-基礎入門.md",
+        "developer-mode": "https://aily.pro/docs_zh_hk/003-開發者/00-開發者模式.md",
+        "library-specification": "https://aily.pro/docs_zh_hk/003-開發者/01-庫規範.md",
+        "library-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/02-庫適配.md",
+        "board-specification": "https://aily.pro/docs_zh_hk/003-開發者/03-開發板規範.md",
+        "board-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/04-開發板適配.md",
+        "use-ai-for-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/05-使用AI進行適配.md",
+        "component-editor": "https://aily.pro/docs_zh_hk/003-開發者/06-元件編輯器.md",
+        "offline-service": "https://aily.pro/docs_zh_hk/004-其它/01-離線服務.md"
+    }
+}
