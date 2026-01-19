@@ -1,1 +1,106 @@
-{"menu":[{"title":"ホーム","page":"home"},{"title":"ソフトウェア使用","submenu":[{"title":"ソフトウェアインストール","page":"software-installation"},{"title":"基本使用ガイド","page":"basic-usage-guide"},{"title":"AI使用ガイド","page":"ai-usage-guide"},{"title":"シリアルモニター","page":"serial-monitor"},{"title":"クラウドストレージとプロジェクト共有","page":"cloud-storage-and-project-sharing"},{"title":"シミュレーター","page":"simulator-usage-guide"}]},{"title":"チュートリアル集","submenu":[{"title":"入門ガイド","page":"getting-started"}]},{"title":"開発者","submenu":[{"title":"開発者モード","page":"developer-mode"},{"title":"ライブラリ仕様","page":"library-specification"},{"title":"ライブラリ適応","page":"library-adaptation"},{"title":"ボード仕様","page":"board-specification"},{"title":"ボード適応","page":"board-adaptation"},{"title":"AIを使用した適応","page":"use-ai-for-adaptation"},{"title":"コンポーネントエディター","page":"component-editor"}]},{"title":"その他","submenu":[{"title":"オフラインサービス","page":"offline-service"}]}],"short":{"home":"https://aily.pro/docs_ja/000-ホーム.md","software-installation":"https://aily.pro/docs_ja/001-ソフトウェア使用/00-ソフトウェアインストール.md","basic-usage-guide":"https://aily.pro/docs_ja/001-ソフトウェア使用/01-基本使用ガイド.md","ai-usage-guide":"https://aily.pro/docs_ja/001-ソフトウェア使用/02-AI使用ガイド.md","serial-monitor":"https://aily.pro/docs_ja/001-ソフトウェア使用/03-シリアルモニター.md","cloud-storage-and-project-sharing":"https://aily.pro/docs_ja/001-ソフトウェア使用/04-クラウドストレージとプロジェクト共有.md","simulator-usage-guide":"https://aily.pro/docs_ja/001-ソフトウェア使用/05-シミュレーター.md","getting-started":"https://aily.pro/docs_ja/002-チュートリアル集/001-入門ガイド.md","developer-mode":"https://aily.pro/docs_ja/003-開発者/00-開発者モード.md","library-specification":"https://aily.pro/docs_ja/003-開発者/01-ライブラリ仕様.md","library-adaptation":"https://aily.pro/docs_ja/003-開発者/02-ライブラリ適応.md","board-specification":"https://aily.pro/docs_ja/003-開発者/03-ボード仕様.md","board-adaptation":"https://aily.pro/docs_ja/003-開発者/04-ボード適応.md","use-ai-for-adaptation":"https://aily.pro/docs_ja/003-開発者/05-AIを使用した適応.md","component-editor":"https://aily.pro/docs_ja/003-開発者/06-コンポーネントエディター.md","offline-service":"https://aily.pro/docs_ja/004-その他/01-オフラインサービス.md"}}
+{
+    "menu": [
+        {
+            "title": "ホーム",
+            "page": "home"
+        },
+        {
+            "title": "ソフトウェア使用",
+            "submenu": [
+                {
+                    "title": "ソフトウェアインストール",
+                    "page": "software-installation"
+                },
+                {
+                    "title": "基本使用ガイド",
+                    "page": "basic-usage-guide"
+                },
+                {
+                    "title": "AI使用ガイド",
+                    "page": "ai-usage-guide"
+                },
+                {
+                    "title": "シリアルモニター",
+                    "page": "serial-monitor"
+                },
+                {
+                    "title": "クラウドストレージとプロジェクト共有",
+                    "page": "cloud-storage-and-project-sharing"
+                },
+                {
+                    "title": "シミュレーター",
+                    "page": "simulator-usage-guide"
+                }
+            ]
+        },
+        {
+            "title": "チュートリアル集",
+            "submenu": [
+                {
+                    "title": "入門ガイド",
+                    "page": "getting-started"
+                }
+            ]
+        },
+        {
+            "title": "開発者",
+            "submenu": [
+                {
+                    "title": "開発者モード",
+                    "page": "developer-mode"
+                },
+                {
+                    "title": "ライブラリ仕様",
+                    "page": "library-specification"
+                },
+                {
+                    "title": "ライブラリ適応",
+                    "page": "library-adaptation"
+                },
+                {
+                    "title": "ボード仕様",
+                    "page": "board-specification"
+                },
+                {
+                    "title": "ボード適応",
+                    "page": "board-adaptation"
+                },
+                {
+                    "title": "AIを使用した適応",
+                    "page": "use-ai-for-adaptation"
+                },
+                {
+                    "title": "コンポーネントエディター",
+                    "page": "component-editor"
+                }
+            ]
+        },
+        {
+            "title": "その他",
+            "submenu": [
+                {
+                    "title": "オフラインサービス",
+                    "page": "offline-service"
+                }
+            ]
+        }
+    ],
+    "short": {
+        "home": "https://aily.pro/docs_ja/000-ホーム.md",
+        "software-installation": "https://aily.pro/docs_ja/001-ソフトウェア使用/00-ソフトウェアインストール.md",
+        "basic-usage-guide": "https://aily.pro/docs_ja/001-ソフトウェア使用/01-基本使用ガイド.md",
+        "ai-usage-guide": "https://aily.pro/docs_ja/001-ソフトウェア使用/02-AI使用ガイド.md",
+        "serial-monitor": "https://aily.pro/docs_ja/001-ソフトウェア使用/03-シリアルモニター.md",
+        "cloud-storage-and-project-sharing": "https://aily.pro/docs_ja/001-ソフトウェア使用/04-クラウドストレージとプロジェクト共有.md",
+        "simulator-usage-guide": "https://aily.pro/docs_ja/001-ソフトウェア使用/05-シミュレーター.md",
+        "getting-started": "https://aily.pro/docs_ja/002-チュートリアル集/001-入門ガイド.md",
+        "developer-mode": "https://aily.pro/docs_ja/003-開発者/00-開発者モード.md",
+        "library-specification": "https://aily.pro/docs_ja/003-開発者/01-ライブラリ仕様.md",
+        "library-adaptation": "https://aily.pro/docs_ja/003-開発者/02-ライブラリ適応.md",
+        "board-specification": "https://aily.pro/docs_ja/003-開発者/03-ボード仕様.md",
+        "board-adaptation": "https://aily.pro/docs_ja/003-開発者/04-ボード適応.md",
+        "use-ai-for-adaptation": "https://aily.pro/docs_ja/003-開発者/05-AIを使用した適応.md",
+        "component-editor": "https://aily.pro/docs_ja/003-開発者/06-コンポーネントエディター.md",
+        "offline-service": "https://aily.pro/docs_ja/004-その他/01-オフラインサービス.md"
+    }
+}
