@@ -24,11 +24,21 @@ jobs:
         run: |
           node process.js
       
+      - name: Generate upload list
+        id: upload_list
+        run: |
+          $uploadConfig = @()
+          Get-ChildItem -Directory -Filter "docs*" | ForEach-Object {
+            $uploadConfig += "$($_.Name) => `${{ secrets.TARGET }}"
+          }
+          $uploads = $uploadConfig -join "`n"
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
+        shell: pwsh
+      
       - name: Deploy
         uses: Dylan700/sftp-upload-action@latest
         with:
           server: ${{ secrets.HOST }}
           username: ubuntu
           key: ${{ secrets.PRIVATEKEY }}
-          uploads: |
-            docs => ${{ secrets.TARGET }}
+          uploads: ${{ steps.upload_list.outputs.uploads }}
