@@ -29,7 +29,7 @@ jobs:
         run: |
           $uploadConfig = @()
           Get-ChildItem -Directory -Filter "docs*" | ForEach-Object {
-            $uploadConfig += "$($_.Name) => `${{ secrets.TARGET }}"
+            $uploadConfig += "$($_.Name) => `${{ secrets.TARGET }}/$($_.Name)"
           }
           $uploads = $uploadConfig -join "`n"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
