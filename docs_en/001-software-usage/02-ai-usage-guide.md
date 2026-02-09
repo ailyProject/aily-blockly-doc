@@ -1,46 +1,48 @@
-# AI Function Usage Guide
-How to start AI conversation:
+# AI Function Usage Guide  
 
-Click the AI function in the upper right corner to start the AI conversation function
+In the main interface, the toolbar is located at the upper right. Click the ![](../img/0102/ai-btn.webp) button to start the AI interaction function.  
 
-![](../img/aimode/ai01.png)
+## Mode Switching  
 
-In the lower left corner, you can switch between Q&A module and agent module
+Click the mode switch button at the bottom of the AI interface to switch AI modes  
+ ![](../img/0102/mode-btn.webp)  
 
-![](../img/aimode/ai02.png)
+In `Q&A Mode`, AI has read access to the project, can collect workspace information, and provide answers to user questions;
+In `Agent Mode`, AI has read and write access to the project, can call preset tools and services to operate on the project, but will consume a large amount of tokens.
 
-### Q&A Mode Usage
+## Common Usage Methods
 
-The Q&A module can use large models for conversations and answer questions encountered during use
-Ask AI directly
+Switch to Agent mode to perform various functions such as project analysis, automatic programming, error fixing, library conversion, etc.
 
-![](../img/aimode/ai03.png)
+### Project Analysis
+You can try entering your project requirements, which can be vague:
+```
+I want to develop an environmental data logger, help me design it.
+```
+Or specific requirements:
+```
+Use ESP32 combined with DHT22 to collect temperature and humidity data, and store it on a TF card. Collect data every 60 seconds, and record it in the file in the format of "system time + data", the format is "timestamp, temperature, humidity\n", such as: "123456,32,45\n"
+```
 
-AI will give you a suitable solution
+### Automatic Programming
+Directly describe the program you want, then wait for AI to write it for you
+```
+Help me write a serial port test program: use Arduino UNO R4 minima; 115200 baud rate communication; output a set of values every 500ms; 8 random values per set, values separated by commas, single value range within 0~255; each set ends with a newline; corresponding positions in each set should have continuity, not fluctuate too much.
+```
 
-![](../img/aimode/ai04.png)
+### Error Fixing
+When compilation or upload reports an error, click to view details, you can see the error content in the log, then double-click the error content to submit the error to the AI input box, send the error information, and AI will give processing suggestions or directly handle it for you.
 
-### Agent Mode Usage
-
-Agent mode only needs to switch from "Q&A" to "Agent" in the lower left corner
-
-![](../img/aimode/ai05.png)
-
-Agent mode can fully automatically help you generate programs
-
-
-In agent mode, AI will automatically help you install library files and generate graphic blocks
-## Project Analysis
-Recommendation and installation of development boards and libraries
-Make your requirements to AI, and AI will automatically arrange tasks and execute them step by step
-
-![](../img/aimode/ai06.png)
-
-## Code Generation
-
-![](../img/aimode/ai07.png)
-
-After AI automatically generates code, it will also display the function and logic of the code
-
+### Library Conversion
+If you have a library from arduino, micropython or other similar software that you want to use in this software, you can use AI to convert the library to this software's library, the prompt is as follows:
+```
+"C:\Users\coloz\Downloads\xxx-lib" is the arduino xxx library source code, please convert this library to an aily blockly library according to the specification
+```
+Then wait for the library conversion to complete and install it.
 
 ## AI Function Configuration  
+Through the settings button in the upper right corner of the AI ASSISTANT interface, you can open the AI assistant settings page  
+### Using External Models  
+On the settings page, you can fill in your own LLM apikey to call more models. Theoretically supports all models with OpenAI interface style.
+### Loop Count
+Loop count is the maximum number of requests for a single agent operation, up to 100 times, usually no need to modify.

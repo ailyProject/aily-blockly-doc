@@ -23,7 +23,7 @@ node cli.js update
 ```
 > After every time you need to update the npm repository, you can use this command
 
-5. Open aily blockly software, open the settings pop-up window through the upper left menu, click Repository Settings, select Local Repository.
+5. Open aily blockly software, through the upper left menu, open the `Settings` window, click `Service Region`, select `Local`.
 
 Now the configuration is complete, you will use the local service when creating new projects and installing libraries in the software.
 
