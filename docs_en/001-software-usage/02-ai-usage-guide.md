@@ -36,13 +36,17 @@ When compilation or upload reports an error, click to view details, you can see 
 ### Library Conversion
 If you have a library from arduino, micropython or other similar software that you want to use in this software, you can use AI to convert the library to this software's library, the prompt is as follows:
 ```
-"C:\Users\coloz\Downloads\xxx-lib" is the arduino xxx library source code, please convert this library to an aily blockly library according to the specification
+"C:\Users\coloz\Downloads\xxx-lib" is the xxx library source code, please convert this library to an aily blockly library according to the specification
 ```
 Then wait for the library conversion to complete and install it.
 
 ## AI Function Configuration  
 Through the settings button in the upper right corner of the AI ASSISTANT interface, you can open the AI assistant settings page  
 ### Using External Models  
-On the settings page, you can fill in your own LLM apikey to call more models. Theoretically supports all models with OpenAI interface style.
+On the settings page, you can fill in your own LLM apikey to call more models. Please note the following:  
+- The model interface must be in OpenAI interface style;
+- The cloud has hardcoded prompt words, so you cannot connect to models on localhost. If you need self-deployment, please forward the interface to a public network; (Without hardcoded prompt words, our interface would be subject to malicious use)
+- You need to use flagship models with 700B+ parameters to achieve normal agent performance. Testing models below 200B is meaningless.
+
 ### Loop Count
 Loop count is the maximum number of requests for a single agent operation, up to 100 times, usually no need to modify.
