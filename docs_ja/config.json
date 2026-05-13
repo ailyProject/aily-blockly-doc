@@ -30,15 +30,10 @@
                 {
                     "title": "シミュレーター",
                     "page": "simulator-usage-guide"
-                }
-            ]
-        },
-        {
-            "title": "チュートリアル集",
-            "submenu": [
+                },
                 {
-                    "title": "入門ガイド",
-                    "page": "getting-started"
+                    "title": "プログラマーの使用方法",
+                    "page": "shao-lu-qi-shi-yong"
                 }
             ]
         },
@@ -93,7 +88,7 @@
         "serial-monitor": "https://aily.pro/docs_ja/001-ソフトウェア使用/03-シリアルモニター.md",
         "cloud-storage-and-project-sharing": "https://aily.pro/docs_ja/001-ソフトウェア使用/04-クラウドストレージとプロジェクト共有.md",
         "simulator-usage-guide": "https://aily.pro/docs_ja/001-ソフトウェア使用/05-シミュレーター.md",
-        "getting-started": "https://aily.pro/docs_ja/002-チュートリアル集/001-入門ガイド.md",
+        "shao-lu-qi-shi-yong": "https://aily.pro/docs_ja/001-ソフトウェア使用/06-プログラマーの使用方法.md",
         "developer-mode": "https://aily.pro/docs_ja/003-開発者/00-開発者モード.md",
         "library-specification": "https://aily.pro/docs_ja/003-開発者/01-ライブラリ仕様.md",
         "library-adaptation": "https://aily.pro/docs_ja/003-開発者/02-ライブラリ適応.md",

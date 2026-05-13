@@ -30,15 +30,10 @@
                 {
                     "title": "仿真器",
                     "page": "simulator-usage-guide"
-                }
-            ]
-        },
-        {
-            "title": "教學合集",
-            "submenu": [
+                },
                 {
-                    "title": "基礎入門",
-                    "page": "getting-started"
+                    "title": "燒錄器使用",
+                    "page": "shao-lu-qi-shi-yong"
                 }
             ]
         },
@@ -93,7 +88,7 @@
         "serial-monitor": "https://aily.pro/docs_zh_hk/001-軟體使用/03-串口監視器.md",
         "cloud-storage-and-project-sharing": "https://aily.pro/docs_zh_hk/001-軟體使用/04-雲端儲存與專案分享.md",
         "simulator-usage-guide": "https://aily.pro/docs_zh_hk/001-軟體使用/05-仿真器.md",
-        "getting-started": "https://aily.pro/docs_zh_hk/002-教學合集/001-基礎入門.md",
+        "shao-lu-qi-shi-yong": "https://aily.pro/docs_zh_hk/001-軟體使用/06-燒錄器使用.md",
         "developer-mode": "https://aily.pro/docs_zh_hk/003-開發者/00-開發者模式.md",
         "library-specification": "https://aily.pro/docs_zh_hk/003-開發者/01-庫規範.md",
         "library-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/02-庫適配.md",
