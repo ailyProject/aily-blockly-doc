@@ -33,7 +33,11 @@
                 },
                 {
                     "title": "Programmer Usage Guide",
-                    "page": "shao-lu-qi-shi-yong"
+                    "page": "debugger-usage-guide"
+                },
+                {
+                    "title": "OTA",
+                    "page": "ota"
                 }
             ]
         },
@@ -88,7 +92,8 @@
         "serial-monitor": "https://aily.pro/docs_en/001-software-usage/03-serial-monitor.md",
         "cloud-storage-and-project-sharing": "https://aily.pro/docs_en/001-software-usage/04-cloud-storage-and-project-sharing.md",
         "simulator-usage-guide": "https://aily.pro/docs_en/001-software-usage/05-simulator-usage-guide.md",
-        "shao-lu-qi-shi-yong": "https://aily.pro/docs_en/001-software-usage/06-programmer-usage-guide.md",
+        "debugger-usage-guide": "https://aily.pro/docs_en/001-software-usage/06-programmer-usage-guide.md",
+        "ota": "https://aily.pro/docs_en/001-software-usage/07-OTA.md",
         "developer-mode": "https://aily.pro/docs_en/003-developer/00-developer-mode.md",
         "library-specification": "https://aily.pro/docs_en/003-developer/01-library-specification.md",
         "library-adaptation": "https://aily.pro/docs_en/003-developer/02-library-adaptation.md",

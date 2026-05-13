@@ -15,5 +15,6 @@
 "仿真器":"simulator-usage-guide",
 "离线服务":"offline-service",
 "串口监视器":"serial-monitor",
-"烧录器使用":"debugger-usage-guide"
+"烧录器使用":"debugger-usage-guide",
+"OTA":""
 }
