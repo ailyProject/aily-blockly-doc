@@ -1,28 +1,30 @@
-# Board Adaptation Guide  
+# Board Adaptation Guide
 
-## Development and Debugging Method  
+[Board Repository](https://github.com/ailyProject/aily-blockly-boards)
+
+## Development and Debugging
 
 ### Enable Developer Mode
-Through `Menu > Settings > Developer Mode`, enable developer mode. At this time, a 🔁 icon will appear to the right of the `Library Manager` button in the lower left corner of the blockly workspace, which is used to manually reload the library after modifying the library source code.
+Enable Developer Mode through `Menu > Settings > Developer Mode`. After that, a 🔁 icon will appear to the right of the `Library Manager` button at the lower-left corner of the Blockly workspace. This icon is used to manually reload the library after you modify its source code.
 
-## Adapt Based on Existing Boards
-If your board uses the same as Arduino official boards, using avr, renesas, or using esp32, you can find similar configuration files in existing configurations, copy and modify on this basis.  
+## Adaptation Based on Existing Boards
+If your board is similar to an official Arduino board and uses avr, renesas, or esp32, you can find a similar configuration in the existing configs, copy it, and modify it on that basis.
 
-### Arduino Compatible Board Adaptation  
-The current version supports avr and renesas core Arduino compatible boards, refer to arduino_uno, arduino_uno_r4 directories  
+### Arduino-Compatible Board Adaptation
+The current version supports Arduino-compatible boards based on avr and renesas cores. Refer to the `arduino_uno` and `arduino_uno_r4` directories.
 
 ### esp32 Adaptation
-This repository has prepared three templates: esp32, esp32c3, esp32s3. Determine the core model of your board, then copy the corresponding folder, change it to your board name, and then modify the package.json and board.json files accordingly.
-The `/template` is the project initial template project. If your board comes with some libraries, you can add them to `/template/package.json`, so that users will automatically load the corresponding libraries after creating a new project.  
+This repository provides esp32-related templates. Determine your board's core model, then copy the corresponding folder, rename it to your board name, and update `package.json` and `board.json` accordingly.
+`/template` is the initial project template. If your board includes some built-in libraries, you can add them to `/template/package.json` so they are automatically loaded when a user creates a new project.
 
-### STM32 Adaptation  
-To be written  
+### STM32 Adaptation
+[Reference: STM32F103C8](https://github.com/ailyProject/aily-blockly-boards/tree/main/stm32f103c8)
 
-### Raspberry Pi RP Series MCU Adaptation  
-To be written  
+### Raspberry Pi RP Series MCU Adaptation
+[Reference: Raspberry Pi Pico 2 W](https://github.com/ailyProject/aily-blockly-boards/tree/main/raspberrypi_pico2_w)
 
 ### Custom Compile Parameter Adaptation
-The compile parameters of the board are configured in the `compilerParam` parameter in the template `board.json` file. If there are special compilation configuration requirements, you can use a similar method for configuration (the same usage as arduino-cli).
+The board's compile parameters are configured through the `compilerParam` field in the template `board.json` file. If you have special compilation requirements, you can configure them in a similar way to the following examples, which use the same syntax as `arduino-cli`.
 ```
 compile -b esp32:esp32:esp32c3 --build-property build.flash_mode=dio --build-property build.flash_freq=80m --build-property build.flash_size=4MB
 compile -b arduino:avr:uno --build-property build.extra_flags=\"-DMY_DEFINE=\"hello world\"\""
@@ -43,7 +45,7 @@ bossac -d --port=${serial} -a -U -e -w ${file} -R
 dfu-util --device 0x2341:0x0069,:0x0369 -D ${file} -a0 -Q
 ```
 
-Replaceable variables:
+Available variables:
 
 - `${serial}`
 - `${baud}`
@@ -52,29 +54,31 @@ Replaceable variables:
 - `${partitions}`
 - `${boot_app0}`
 
-String constants:
+String literal:
 
 - `${"filename"}`
 
-When you need to use --use_1200bps_touch and --wait_for_upload: Wrap with "[]" and put at the front
+When `--use_1200bps_touch` and `--wait_for_upload` are required, wrap them in `[]` and place them at the beginning.
 
-
-### Install Library
-You can first put the library template or your own created library in any location on the computer, such as `d:\arduino_test`.
-Then open the project in aily blockly, open the terminal, and input:
+### Install a Library
+You can place a library template or a library you created anywhere on your computer, such as `d:\arduino_test`.
+Then open the project in aily blockly, open the terminal, and run:
 ```
 npm i d:\arduino_test
 ```
-You can install this board for this project.
+This installs the board for the project.
 
-### Reload Library
+### Reload the Library
 Click the 🔁 icon to the right of `Project Management` to reload the project.
 
-### Modify Library
-You can directly modify `node_modules\@aily-project\<board name>` in the project directory, and then reload in aily blockly to test;
-You can also modify the original board files under `d:\arduino_test`, and then install the library again to test.
+### Modify the Library
+You can directly modify `node_modules\@aily-project\<board name>` in the project directory, then reload it in aily blockly for testing.
+You can also modify the original board files under `d:\arduino_test`, then install the library again for testing.
 
-## Submit Library 
-You can first fork this project to your personal repository. Then put your newly created board configuration in it, and then submit a Pull request.
-Contact Naihe col to merge, or wait for other project administrators to merge.  
-After the merge is complete, it will be pushed to the npm repository, and all users can use your developed library.
+## Adaptation Based on a New Chip
+If you need to add a board for a chip that is not yet supported in the board repository, you may need to upload the corresponding compiler and tools. Since compilers and tools are usually binary executables, we cannot determine whether they are safe. Therefore, for adaptation to a completely new chip, please contact the official team and provide the source code and trusted sources of the relevant tools to avoid potential security issues.
+
+## Submit a Library
+You can first fork this project to your personal repository. Then place your newly created board configuration in it and submit a Pull Request.
+Contact Naihe col to merge it, or wait for another project maintainer to merge it.
+After the merge is completed, it will be published to npm, and all users will be able to use the board library you developed.
