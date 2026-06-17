@@ -6,39 +6,80 @@ on:
       - deploy
 
 jobs:
-  build:
+  build-cn:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
 
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 22.21.1
+        uses: actions/setup-node@v6
         with:
-          node-version: '18.x'
+          node-version: '22.21.1'
+          cache: 'npm'
       
-      - name: Dependent environment
-        run: |
-          npm i
+      - name: Install dependencies
+        run: npm ci
+
       - name: Compile
+        run: node process.js
+
+      - name: Generate upload list
+        id: upload_list
         run: |
-          node process.js
+          $uploadConfig = @(
+            "docs => `${{ secrets.CN_TARGET }}/docs",
+            "docs_en => `${{ secrets.CN_TARGET }}/docs_en",
+            "docs_zh_hk => `${{ secrets.CN_TARGET }}/docs_zh_hk",
+            "docs_ja => `${{ secrets.CN_TARGET }}/docs_ja"
+          )
+          $uploads = $uploadConfig -join "`n"
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
+        shell: pwsh
+
+      - name: Deploy To CN
+        uses: Dylan700/sftp-upload-action@v1.2.3
+        with:
+          server: ${{ secrets.CN_HOST }}
+          username: ${{ secrets.CN_USERNAME }}
+          password: ${{ secrets.CN_PASSWORD }}
+          uploads: ${{ steps.upload_list.outputs.uploads }}
+
+  build-intl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Use Node.js 22.21.1
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22.21.1'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile
+        run: node process.js
       
       - name: Generate upload list
         id: upload_list
         run: |
-          $uploadConfig = @()
-          Get-ChildItem -Directory -Filter "docs*" | ForEach-Object {
-            $uploadConfig += "$($_.Name) => `${{ secrets.TARGET }}/$($_.Name)"
-          }
+          $uploadConfig = @(
+            "docs => `${{ secrets.TARGET }}/docs",
+            "docs_en => `${{ secrets.TARGET }}/docs_en",
+            "docs_zh_hk => `${{ secrets.TARGET }}/docs_zh_hk",
+            "docs_ja => `${{ secrets.TARGET }}/docs_ja"
+          )
           $uploads = $uploadConfig -join "`n"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
         shell: pwsh
       
-      - name: Deploy
-        uses: Dylan700/sftp-upload-action@latest
+      - name: Deploy To INTL
+        uses: Dylan700/sftp-upload-action@v1.2.3
         with:
           server: ${{ secrets.HOST }}
-          username: ubuntu
-          key: ${{ secrets.PRIVATEKEY }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           uploads: ${{ steps.upload_list.outputs.uploads }}
