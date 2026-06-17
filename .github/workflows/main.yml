@@ -28,10 +28,10 @@ jobs:
         id: upload_list
         run: |
           $uploadConfig = @(
-            "docs => `${{ secrets.CN_TARGET }}/docs",
-            "docs_en => `${{ secrets.CN_TARGET }}/docs_en",
-            "docs_zh_hk => `${{ secrets.CN_TARGET }}/docs_zh_hk",
-            "docs_ja => `${{ secrets.CN_TARGET }}/docs_ja"
+            "./docs/ => `${{ secrets.CN_TARGET }}/docs/",
+            "./docs_en/ => `${{ secrets.CN_TARGET }}/docs_en/",
+            "./docs_zh_hk/ => `${{ secrets.CN_TARGET }}/docs_zh_hk/",
+            "./docs_ja/ => `${{ secrets.CN_TARGET }}/docs_ja/"
           )
           $uploads = $uploadConfig -join "`n"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
@@ -67,10 +67,10 @@ jobs:
         id: upload_list
         run: |
           $uploadConfig = @(
-            "docs => `${{ secrets.TARGET }}/docs",
-            "docs_en => `${{ secrets.TARGET }}/docs_en",
-            "docs_zh_hk => `${{ secrets.TARGET }}/docs_zh_hk",
-            "docs_ja => `${{ secrets.TARGET }}/docs_ja"
+            "./docs/ => `${{ secrets.TARGET }}/docs/",
+            "./docs_en/ => `${{ secrets.TARGET }}/docs_en/",
+            "./docs_zh_hk/ => `${{ secrets.TARGET }}/docs_zh_hk/",
+            "./docs_ja/ => `${{ secrets.TARGET }}/docs_ja/"
           )
           $uploads = $uploadConfig -join "`n"
           Add-Content -Path $env:GITHUB_OUTPUT -Value "uploads<<EOF`n$uploads`nEOF"
