@@ -71,6 +71,10 @@
                 {
                     "title": "Component Editor",
                     "page": "component-editor"
+                },
+                {
+                    "title": "Publish Library",
+                    "page": "publish-library"
                 }
             ]
         },
@@ -101,6 +105,7 @@
         "board-adaptation": "https://aily.pro/docs_en/003-developer/04-board-adaptation.md",
         "use-ai-for-adaptation": "https://aily.pro/docs_en/003-developer/05-use-ai-for-adaptation.md",
         "component-editor": "https://aily.pro/docs_en/003-developer/06-component-editor.md",
+        "publish-library": "https://aily.pro/docs_en/003-developer/07-publish-library.md",
         "offline-service": "https://aily.pro/docs_en/004-other/01-offline-service.md"
     }
 }

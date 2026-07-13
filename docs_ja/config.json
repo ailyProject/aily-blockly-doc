@@ -71,6 +71,10 @@
                 {
                     "title": "コンポーネントエディター",
                     "page": "component-editor"
+                },
+                {
+                    "title": "ライブラリの公開",
+                    "page": "publish-library"
                 }
             ]
         },
@@ -101,6 +105,7 @@
         "board-adaptation": "https://aily.pro/docs_ja/003-開発者/04-ボード適応.md",
         "use-ai-for-adaptation": "https://aily.pro/docs_ja/003-開発者/05-AIを使用した適応.md",
         "component-editor": "https://aily.pro/docs_ja/003-開発者/06-コンポーネントエディター.md",
+        "publish-library": "https://aily.pro/docs_ja/003-開発者/07-ライブラリの公開.md",
         "offline-service": "https://aily.pro/docs_ja/004-その他/01-オフラインサービス.md"
     }
 }

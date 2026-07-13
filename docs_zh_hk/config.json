@@ -71,6 +71,10 @@
                 {
                     "title": "元件編輯器",
                     "page": "component-editor"
+                },
+                {
+                    "title": "發布庫",
+                    "page": "publish-library"
                 }
             ]
         },
@@ -101,6 +105,7 @@
         "board-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/04-開發板適配.md",
         "use-ai-for-adaptation": "https://aily.pro/docs_zh_hk/003-開發者/05-使用AI進行適配.md",
         "component-editor": "https://aily.pro/docs_zh_hk/003-開發者/06-元件編輯器.md",
+        "publish-library": "https://aily.pro/docs_zh_hk/003-開發者/07-發布庫.md",
         "offline-service": "https://aily.pro/docs_zh_hk/004-其它/01-離線服務.md"
     }
 }

@@ -21,9 +21,9 @@ You can directly modify `node_modules\@aily-project\<library name>` in the proje
 You can also modify the original library under `d:\lib-test`, and then install the library again to test.
 
 ## Submit Library 
-You can first fork this project to your personal repository. Then put your newly created library in it, and then submit a Pull request.
-Contact Naihe col to merge, or wait for other project administrators to merge.  
-After the merge is complete, it will be pushed to the npm repository, and all users can use your developed library.
+aily Blockly can use your GitHub account to submit an imported local library that has passed real-hardware testing to the public library repository.
+
+Right-click the local library in the Blockly toolbox and select **Publish Library**. For complete instructions about account authorization, release metadata, repeated submissions, and review status, see **Publish Library** in the **Developer** section.
 
 ## Multi-language Support  
 You can add an i18n directory under the library directory to provide multi-language support for the library:
