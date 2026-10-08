@@ -38,6 +38,10 @@
                 {
                     "title": "OTA",
                     "page": "ota"
+                },
+                {
+                    "title": "教育版使用指南",
+                    "page": "education-usage-guide"
                 }
             ]
         },
@@ -98,6 +102,7 @@
         "simulator-usage-guide": "https://aily.pro/docs/001-软件使用/05-仿真器.md",
         "debugger-usage-guide": "https://aily.pro/docs/001-软件使用/06-烧录器使用.md",
         "ota": "https://aily.pro/docs/001-软件使用/07-OTA.md",
+        "education-usage-guide": "https://aily.pro/docs/001-软件使用/08-教育版使用指南.md",
         "developer-mode": "https://aily.pro/docs/003-开发者/00-开发者模式.md",
         "library-specification": "https://aily.pro/docs/003-开发者/01-库规范.md",
         "library-adaptation": "https://aily.pro/docs/003-开发者/02-库适配.md",
